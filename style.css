@@ -1,0 +1,109 @@
+body {
+    /* الخلفية والخطوط الأساسية */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    
+    /* دعم اللغة العربية (من اليمين لليسار) */
+    direction: rtl; 
+    text-align: right;
+}
+
+.container {
+    /* حاوية المحتوى الرئيسية */
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    /* تصميم العنوان */
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    /* تباعد مجموعات الإدخال */
+    margin-bottom: 20px;
+}
+
+label {
+    /* تصميم التسميات */
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+textarea, input[type="file"], input[type="text"] {
+    /* تصميم حقول الإدخال */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; 
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    /* تصميم زر إنشاء الفيديو */
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    /* إخفاء العناصر */
+    display: none;
+}
+
+#statusMessage {
+    /* رسالة "جارٍ العمل..." */
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffc107;
+    color: #333;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#resultArea {
+    /* منطقة عرض رابط التحميل */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#downloadLink {
+    /* رابط التحميل */
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
