@@ -15,5 +15,5 @@ Allow: /appcategory-apple.html
 Allow: /app/category-samsung.html
 Allow: /app/category-xiaomi-vivo.html
 Allow: /app/accessories.html
-Sitemap: https://my-first-site-gold-seven.vercel.app/sitemap.xml
+Sitemap: https://lionfoox.github.io/mw/sitemap.xml
 # التأكد من أن هذا الرابط يقود إلى الملف الذي رفعته أعلاه
