@@ -1,5 +1,5 @@
 /* ========================================================== */
-/* === ملف التنسيقات الموحد (styles.css) - مُعدّل === */
+/* === ملف التنسيقات الموحد (style.css) - الكود النهائي === */
 /* ========================================================== */
 
 /* المتغيرات الأساسية للموقع (الألوان والخطوط) */
@@ -134,8 +134,10 @@ a {
 
 .store-hero {
     padding: 50px 0;
-    /* التعديل هنا: افترضنا أن الصورة في مجلد 'images' في جذر المستودع */
-    background: linear-gradient(180deg, rgba(255, 253, 242, 0.5) 0%, rgba(255, 253, 242, 0.90) 70%), url('../images/background-image.jpg');
+    /* تأكيد لون الخلفية الأساسي في حالة عدم تحميل الصورة */
+    background-color: var(--color-bg-secondary);
+    /* إذا كانت لديك صورة خلفية، فستحتاج لتعديل هذا المسار: */
+    background-image: linear-gradient(180deg, rgba(255, 253, 242, 0.5) 0%, rgba(255, 253, 242, 0.90) 70%), url('../images/background-image.jpg');
     background-size: cover; 
     background-position: center top; 
     border-bottom: 1px solid #ddd;
@@ -293,7 +295,7 @@ a {
 
 .product-card img {
     width: 100%;
-    height: 180px; /* ارتفاع موحد لجميع البطاقات */
+    height: 180px; 
     object-fit: contain; 
     padding: 10px;
     border-bottom: 1px solid #f0f0f0;
@@ -301,7 +303,7 @@ a {
 
 .product-info {
     padding: 15px;
-    text-align: center; /* تجميع العناصر في المنتصف */
+    text-align: center; 
 }
 
 .product-card h3 {
@@ -375,4 +377,41 @@ a {
     margin: 0 10px;
     color: var(--color-text-subtle);
     transition: color 0.3s;
+}
+
+/* ========================================================== */
+/* === إظهار وإخفاء قائمة التنقل للأجهزة الصغيرة (Media Queries) === */
+/* ========================================================== */
+
+@media (max-width: 900px) {
+    .main-nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 75px; /* بعد الهيدر */
+        left: 0;
+        background-color: var(--color-bg-secondary);
+        z-index: 1000;
+        border-top: 1px solid var(--color-brand-primary);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav ul li a {
+        padding: 10px 20px;
+        text-align: right;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-header .container {
+        justify-content: space-between;
+    }
 }
